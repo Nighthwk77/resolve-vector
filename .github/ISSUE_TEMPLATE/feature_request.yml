@@ -1,0 +1,34 @@
+name: Feature request
+description: Suggest an improvement to the Resolve Vector product or documentation.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What is difficult today, and who does it affect?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Describe the result rather than prescribing an implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Current workaround or alternatives
+  - type: dropdown
+    id: priority
+    attributes:
+      label: How often would this help?
+      options:
+        - Every day
+        - Several times a week
+        - Occasionally
+        - One specific project
+    validations:
+      required: true

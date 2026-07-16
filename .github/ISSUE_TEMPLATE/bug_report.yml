@@ -1,0 +1,74 @@
+name: Bug report
+description: Report a reproducible problem in a public Resolve Vector release.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve Resolve Vector. Remove API keys, private code, personal data, and sensitive file paths before submitting.
+  - type: input
+    id: version
+    attributes:
+      label: Resolve Vector version
+      placeholder: "For example: 1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version and Mac
+      placeholder: "For example: macOS 15.5, M4 Max"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Installation or launch
+        - Projects and sessions
+        - Running tasks and progress
+        - Models, routing, or provider health
+        - Approvals and safety
+        - Memory
+        - Advisors or web access
+        - Performance
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Use a minimal, non-sensitive example.
+      placeholder: |
+        1. Open...
+        2. Select...
+        3. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Sanitized diagnostics
+      description: Optional. Do not include credentials, private source, or unreviewed logs.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Sensitive-data check
+      options:
+        - label: I removed API keys, private source code, personal data, and sensitive logs.
+          required: true
